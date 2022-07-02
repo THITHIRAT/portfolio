@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import { ThemeProvider } from 'styled-components'
 import { useState, useEffect } from 'react'
 import { GlobalStyles } from '../ThemeConfig'
-// import { lightTheme, darkTheme } from '../constants/theme'
+import { lightTheme, darkTheme } from '../constants/theme.js'
 import Layout from '../Layout'
 import { ChakraProvider } from '@chakra-ui/react'
 import AOS from 'aos'
@@ -33,16 +33,16 @@ function MyApp({ Component, pageProps }) {
     theme == 'light' ? setTheme('dark') : setTheme('light')
   }
 
-  // const currentTheme = theme === 'light' ? lightTheme : darkTheme
+  const currentTheme = theme === 'light' ? lightTheme : darkTheme
 
   return (
     <ChakraProvider>
-      {/* <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}> */}
-      <GlobalStyles />
-      <Layout toggleTheme={toggleTheme} currentTheme={currentTheme}>
-        <Component {...pageProps} currentTheme={currentTheme} />
-      </Layout>
-      {/* </ThemeProvider> */}
+      <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <Layout toggleTheme={toggleTheme} currentTheme={currentTheme}>
+          <Component {...pageProps} currentTheme={currentTheme} />
+        </Layout>
+      </ThemeProvider>
     </ChakraProvider>
   )
 }
