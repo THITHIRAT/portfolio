@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Avatar } from '@chakra-ui/react'
 import styles from '../styles/Work.module.css'
-import { userinfo, headings } from '../constants/userinfo'
+import { userinfo, headings } from '../Constants/userinfo'
 
 const Experiences = ({ currentTheme }) => {
   return (

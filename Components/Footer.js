@@ -1,5 +1,5 @@
 import styles from '../styles/NavbarFooter.module.css'
-import { userinfo } from '../constants/userinfo'
+import { userinfo } from '../Constants/userinfo'
 import Link from 'next/link'
 
 const Footer = ({ currentTheme }) => {

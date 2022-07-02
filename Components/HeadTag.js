@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { userinfo } from '../constants/userinfo'
+import { userinfo } from '../Constants/userinfo'
 
 const HeadTag = ({ page }) => {
   return (

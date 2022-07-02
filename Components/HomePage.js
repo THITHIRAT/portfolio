@@ -2,10 +2,10 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import HomeProject from './HomeProject'
 import Skills from './Skills'
-import { projects } from '../constants/projects'
+import { projects } from '../Constants/projects'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { userinfo, ctaTexts, headings } from '../constants/userinfo'
+import { userinfo, ctaTexts, headings } from '../Constants/userinfo'
 import Education from './Education'
 
 const HomePage = ({ currentTheme }) => {

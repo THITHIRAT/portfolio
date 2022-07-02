@@ -3,7 +3,7 @@ import { useState } from 'react'
 import styles from '../styles/Contact.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
-import { userinfo, headings, ctaTexts } from '../constants/userinfo'
+import { userinfo, headings, ctaTexts } from '../Constants/userinfo'
 
 const Contact = ({ currentTheme }) => {
   const toast = useToast()

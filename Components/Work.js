@@ -1,10 +1,10 @@
 import styles from '../styles/Work.module.css'
 import WorkProject from './WorkProject'
 import BlogCard from './BlogCard'
-import { projects } from '../constants/projects'
-import { custom_blogs, medium_blogs, dev_to } from '../constants/blogs'
+import { projects } from '../Constants/projects'
+import { custom_blogs, medium_blogs, dev_to } from '../Constants/blogs'
 import { useState, useEffect } from 'react'
-import { headings, userinfo } from '../constants/userinfo'
+import { headings, userinfo } from '../Constants/userinfo'
 import Carousel, { CarouselItem } from './Carousel'
 import Experiences from './Experiences'
 
