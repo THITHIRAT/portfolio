@@ -12,7 +12,6 @@ const Contact = ({ currentTheme }) => {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
-  const [submitted, setSubmitted] = useState(false)
 
   const iconStyles = {
     backgroundColor: currentTheme.tertiary,
@@ -23,41 +22,11 @@ const Contact = ({ currentTheme }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Sending')
-    let data = {
-      name: name,
-      email: email,
-      phone: phone,
-      message: message,
-    }
-    setName('')
-    setEmail('')
-    setPhone('')
-    setMessage('')
-
     toast({
       description: 'You reached us!',
       status: 'success',
       duration: 5000,
       isClosable: true,
-    })
-
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log('Response received')
-      if (res.status === 200) {
-        console.log('Response succeeded!')
-        setSubmitted(true)
-        setName('')
-        setEmail('')
-        setPhone('')
-        setMessage('')
-      }
     })
   }
 
