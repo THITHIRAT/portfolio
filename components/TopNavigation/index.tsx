@@ -35,7 +35,7 @@ const TopNavigation = () => {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-center sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <div className="block lg:hidden">
+                  <div className="flex lg:hidden">
                     <Image
                       height={48}
                       width='100%'
@@ -44,7 +44,7 @@ const TopNavigation = () => {
                       alt="Thithirat's Navbar"
                     />
                   </div>
-                  <div className="hidden lg:block">
+                  <div className="hidden lg:flex">
                     <Image
                       height={48}
                       width='100%'
@@ -62,7 +62,7 @@ const TopNavigation = () => {
                         href={item.href}
                         className={classNames(
                           item.name === currentTab ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-2 py-2 rounded-md text-lg font-medium'
+                          'px-4 py-2 rounded-md text-lg font-medium'
                         )}
                         aria-current={item.name === currentTab ? 'page' : undefined}
                         onClick={() => setCurrentTab(item.name)}
