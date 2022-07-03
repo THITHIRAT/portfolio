@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Open Sans', 'sans-serif'],
+        noto: ['Noto Serif', 'serif'],
       },
     },
   },
